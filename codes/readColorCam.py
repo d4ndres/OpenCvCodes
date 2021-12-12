@@ -2,19 +2,22 @@ import cv2
 import numpy as np
 
 
-
-
 def readStreamingCamera():
 	cap = cv2.VideoCapture(0)
 
-	redBajo1 = np.array([160,200,45],np.uint8)
-	redAlto1 = np.array([180,255,255],np.uint8)#Columna de colores definida por rango
+	#Configuraion luz bombillo noche
+	#redBajo1 = np.array([160,150,100],np.uint8)#Rojo
+	#redAlto1 = np.array([188,255,255],np.uint8)#Columna de colores definida por rango
 
-	#redBajo2 = np.array([175,100,20],np.uint8)#Cuadro de colores definido por rangos
-	#redAlto2 = np.array([179,255,255],np.uint8)
+	#configuracion dia
+	#Alejado de la camara buena luz
+	#redBajo1 = np.array([150,200,0],np.uint8)#Rojo
+	#redAlto1 = np.array([190,255,255],np.uint8)#Columna de colores definida por rango
+	redBajo1 = np.array([100,0,0],np.uint8)#Rojo
+	redAlto1 = np.array([130,255,255],np.uint8)#Columna de colores definida por rango
 
-
-
+	#redBajo2 = np.array([100,150,0],np.uint8)#Cuadro de colores definido por rangos
+	#redAlto2 = np.array([130,255,255],np.uint8)#Azul
 
 
 	while True:
